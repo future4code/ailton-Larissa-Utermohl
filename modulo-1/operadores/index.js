@@ -113,6 +113,37 @@
 // let segundoDiv = numeroDois % numeroUm === 0
 // console.log(numeroMaior, numeroIgual, primeiroDiv, segundoDiv)
 
-// Resposta 
+// Resposta
 
 // false, false, false, true
+
+
+
+outrooooooos
+
+const pessoa = {
+  nome: 'Ana',
+  gênero: 'feminino'
+}
+function imprimeMensagem(objeto) {
+  console.log(`Bem vinda ${objeto.nome}. `)
+}
+imprimeMensagem(pessoa)
+
+//JavaScript
+const pessoa = {
+  nome: "Paula",
+  genero: "Feminino"
+  }
+  
+  const desejaBoasVindas = (pessoa) => {
+  if(pessoa.genero === "Feminino") {
+  return "Seja bem-vinda!"
+  } else if(pessoa.genero === "Masculino") {
+  return "Seja bem-vindo!"
+  } else {
+  return "Desejamos boas-vindas!".
+  }
+  }
+    console.log(desejaBoasVindas(pessoa))
+  
