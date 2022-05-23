@@ -1,217 +1,376 @@
-// //1  Leia o código -
+// // //1  Leia o código -
 
-// // // const filme = {
-// // //   nome: 'Auto da Compadecida',
-// // //   ano: 2000,
-// // //   elenco: [
-// // //     'Matheus Nachtergaele',
-// // //     'Selton Mello',
-// // //     'Denise Fraga',
-// // //     'Virginia Cavendish'
-// // //   ],
-// // //   transmissoesHoje: [
-// // //     { canal: 'Telecine', horario: '21h' },
-// // //     { canal: 'Canal Brasil', horario: '19h' },
-// // //     { canal: 'Globo', horario: '14h' }
-// // //   ]
+// // // // const filme = {
+// // // //   nome: 'Auto da Compadecida',
+// // // //   ano: 2000,
+// // // //   elenco: [
+// // // //     'Matheus Nachtergaele',
+// // // //     'Selton Mello',
+// // // //     'Denise Fraga',
+// // // //     'Virginia Cavendish'
+// // // //   ],
+// // // //   transmissoesHoje: [
+// // // //     { canal: 'Telecine', horario: '21h' },
+// // // //     { canal: 'Canal Brasil', horario: '19h' },
+// // // //     { canal: 'Globo', horario: '14h' }
+// // // //   ]
+// // // // }
+
+// // // // //a -O que será impresso no console?
+
+// // // // //Resposta: Será impresso a posicao 0 do elenco, Matheus Nachtergaele.
+// // // // // //Resposta: Imprime a ultima posicao do array. Virginia Cavendish
+// // // // //Resposta:Será impresso Globo, 14h. Globo está na posicão 2 porque contamos a partir do 0.
+
+// // // // //2  Leia o código -
+
+// // // const cachorro = {
+// // //   nome: 'Juca',
+// // //   idade: 3,
+// // //   raca: 'SRD'
 // // // }
 
-// // // //a -O que será impresso no console?
+// // // const gato = { ...cachorro, nome: 'Juba' }
 
-// // // //Resposta: Será impresso a posicao 0 do elenco, Matheus Nachtergaele.
-// // // // //Resposta: Imprime a ultima posicao do array. Virginia Cavendish
-// // // //Resposta:Será impresso Globo, 14h. Globo está na posicão 2 porque contamos a partir do 0.
+// // // const tartaruga = { ...gato, nome: gato.nome.replaceAll('a', 'o') }
 
-// // // //2  Leia o código -
+// // // console.log(cachorro)
+// // // console.log(gato)
+// // // console.log(tartaruga)
 
-// // const cachorro = {
-// //   nome: 'Juca',
-// //   idade: 3,
-// //   raca: 'SRD'
+// // // // //a) O que será impresso no console?
+
+// // // //Nome, idade e raca do cachorro.
+// // // //Nome do gato: Juba através da cópia do objeto.
+// // // / Informacoes do gato devido a copia do objeto e a alteracao com nome.replaceAll da a para o. 
+
+// // // // //b) O que faz a sintaxe dos três pontos antes do nome de um objeto?
+
+// // // //Faz a cópia do objeto.
+
+// // //3  Leia o código
+
+// // function minhaFuncao(objeto, propriedade) {
+// //   return objeto[propriedade]
 // // }
 
-// // const gato = { ...cachorro, nome: 'Juba' }
+// // const pessoa = {
+// //   nome: 'Caio',
+// //   idade: 23,
+// //   backender: false
+// // }
 
-// // const tartaruga = { ...gato, nome: gato.nome.replaceAll('a', 'o') }
+// // console.log(minhaFuncao(pessoa, 'backender'))
+// // console.log(minhaFuncao(pessoa, 'altura'))
 
-// // console.log(cachorro)
-// // console.log(gato)
-// // console.log(tartaruga)
+// // //a) O que vai ser impresso no console? false e indefinido
 
-// // // //a) O que será impresso no console?
+// // //b) Explique o valor impresso no console. Você sabe por que isso aconteceu?
+// //  backender false  e altura não foi declarada para passar informacao.
 
-// // //Nome, idade e raca do cachorro.
-// // //Nome do gato: Juba através da cópia do objeto.
-// // / Informacoes do gato devido a copia do objeto e a alteracao com nome.replaceAll da a para o. 
+// // 1. Resolva os passos a seguir:
 
-// // // //b) O que faz a sintaxe dos três pontos antes do nome de um objeto?
+// //     a) Crie um objeto.
 
-// // //Faz a cópia do objeto.
+// //     Ele deve conter duas propriedades: nome (string) e apelidos (um array que sempre terá exatamente **três apelidos**).
 
-// //3  Leia o código
+// // const pessoa = {
+// //   nome: 'Ana',
+// //   apelidos: ['banana', 'cana', 'tana']
+// // }
+// // function imprimeMensagem(objeto) {
+// //   console.log(
+// //     `Eu sou ${objeto.nome}, mas pode me chamar de: ${objeto.apelidos[0]} , ${objeto.apelidos[1]} , ${objeto.apelidos[2]} `
+// //   )
+// // }
 
-// function minhaFuncao(objeto, propriedade) {
-//   return objeto[propriedade]
+// // a
+
+// // Exemplo de saída
+// "Eu sou Amanda, mas pode me chamar de: Amandinha, Mandinha ou Mandi"
+
+// ***Não se esqueça de chamar a função passando o objeto que você criou como argumento, senão seu código não será executado!
+
+// b) Agora, usando o operador spread, crie um novo objeto mantendo o valor da propriedade nome, mas com uma nova lista de três apelidos.
+
+// const novaPessoa = {
+//   ...pessoa,
+//   apelidos: ['lama', 'lana', 'sana']
 // }
 
-// const pessoa = {
+// imprimeMensagem(novaPessoa)
+// Depois, chame a função feita no item anterior passando como argumento o novo objeto
+
+// **Não lembra da sintaxe de espalhamento ou spread? Não tem problema!
+// Pode pesquisar a vontade! Nesse link tem vários exemplos - e não se esqueçam que o Google é melhor amigo da pessoa desenvolvedora.
+
+// 2. Resolva os passos a seguir:
+
+//     a) Crie dois objetos diferentes com as seguintes propriedades: nome, idade e profissão.
+// // // //1  Leia o código -
+
+// // // // // const filme = {
+// // // // //   nome: 'Auto da Compadecida',
+// // // // //   ano: 2000,
+// // // // //   elenco: [
+// // // // //     'Matheus Nachtergaele',
+// // // // //     'Selton Mello',
+// // // // //     'Denise Fraga',
+// // // // //     'Virginia Cavendish'
+// // // // //   ],
+// // // // //   transmissoesHoje: [
+// // // // //     { canal: 'Telecine', horario: '21h' },
+// // // // //     { canal: 'Canal Brasil', horario: '19h' },
+// // // // //     { canal: 'Globo', horario: '14h' }
+// // // // //   ]
+// // // // // }
+
+// // // // // //a -O que será impresso no console?
+
+// // // // // //Resposta: Será impresso a posicao 0 do elenco, Matheus Nachtergaele.
+// // // // // // //Resposta: Imprime a ultima posicao do array. Virginia Cavendish
+// // // // // //Resposta:Será impresso Globo, 14h. Globo está na posicão 2 porque contamos a partir do 0.
+
+// // // // // //2  Leia o código -
+
+// // // // const cachorro = {
+// // // //   nome: 'Juca',
+// // // //   idade: 3,
+// // // //   raca: 'SRD'
+// // // // }
+
+// // // // const gato = { ...cachorro, nome: 'Juba' }
+
+// // // // const tartaruga = { ...gato, nome: gato.nome.replaceAll('a', 'o') }
+
+// // // // console.log(cachorro)
+// // // // console.log(gato)
+// // // // console.log(tartaruga)
+
+// // // // // //a) O que será impresso no console?
+
+// // // // //Nome, idade e raca do cachorro.
+// // // // //Nome do gato: Juba através da cópia do objeto.
+// // // // / Informacoes do gato devido a copia do objeto e a alteracao com nome.replaceAll da a para o. 
+
+// // // // // //b) O que faz a sintaxe dos três pontos antes do nome de um objeto?
+
+// // // // //Faz a cópia do objeto.
+
+// // // //3  Leia o código
+
+// // // function minhaFuncao(objeto, propriedade) {
+// // //   return objeto[propriedade]
+// // // }
+
+// // // const pessoa = {
+// // //   nome: 'Caio',
+// // //   idade: 23,
+// // //   backender: false
+// // // }
+
+// // // console.log(minhaFuncao(pessoa, 'backender'))
+// // // console.log(minhaFuncao(pessoa, 'altura'))
+
+// // // //a) O que vai ser impresso no console? false e indefinido
+
+// // // //b) Explique o valor impresso no console. Você sabe por que isso aconteceu?
+// // //  backender false  e altura não foi declarada para passar informacao.
+
+// // 1. Resolva os passos a seguir:
+
+// //     a) Crie um objeto.
+
+// //     Ele deve conter duas propriedades: nome (string) e apelidos (um array que sempre terá exatamente **três apelidos**).
+
+// // const pessoa = {
+// //   nome: 'Ana',
+// //   apelidos: ['banana', 'cana', 'tana']
+// // }
+// // function imprimeMensagem(objeto) {
+// //   console.log(
+// //     `Eu sou ${objeto.nome}, mas pode me chamar de: ${objeto.apelidos[0]} , ${objeto.apelidos[1]} , ${objeto.apelidos[2]} `
+// //   )
+// // }
+// // imprimeMensagem(pessoa)
+// //     Depois, escreva uma função que recebe como entrada um objeto
+
+// //     e imprime uma mensagem no modelo abaixo**:**
+
+// //     // Exemplo de entrada
+// // const pessoa = {
+// //   nome: "Amanda",
+// //   apelidos: ["Amandinha", "Mandinha", "Mandi"]
+// // }
+
+// // // Exemplo de saída
+// // "Eu sou Amanda, mas pode me chamar de: Amandinha, Mandinha ou Mandi"
+
+// // ***Não se esqueça de chamar a função passando o objeto que você criou como argumento, senão seu código não será executado!
+
+// // b) Agora, usando o operador spread, crie um novo objeto mantendo o valor da propriedade nome, mas com uma nova lista de três apelidos.
+
+// // const novaPessoa = {
+// //   ...pessoa,
+// //   apelidos: ['lama', 'lana', 'sana']
+// // }
+
+// // imprimeMensagem(novaPessoa)
+// // Depois, chame a função feita no item anterior passando como argumento o novo objeto
+
+// // **Não lembra da sintaxe de espalhamento ou spread? Não tem problema!
+// // Pode pesquisar a vontade! Nesse link tem vários exemplos - e não se esqueçam que o Google é melhor amigo da pessoa desenvolvedora.
+
+// // 2. Resolva os passos a seguir:
+
+// //     a) Crie dois objetos diferentes com as seguintes propriedades: nome, idade e profissão.
+
+// const pessoa1 = {
+//   nome: 'Ana',
+//   idade: 30,
+//   profissao: 'cabelereira'
+// }
+
+// const pessoa2 = {
 //   nome: 'Caio',
-//   idade: 23,
-//   backender: false
+//   idade: 30,
+//   profissao: 'mecanico'
 // }
 
-// console.log(minhaFuncao(pessoa, 'backender'))
-// console.log(minhaFuncao(pessoa, 'altura'))
+// <<<<<<< HEAD
+//     b) Escreva uma função que receba esses objetos e retorne um array com as seguintes informações:
 
-// //a) O que vai ser impresso no console? false e indefinido
+//     1. O valor de `nome`
+// =======
+// //     b) Escreva uma função que receba esses objetos e retorne um array com as seguintes informações:
 
-// //b) Explique o valor impresso no console. Você sabe por que isso aconteceu?
-//  backender false  e altura não foi declarada para passar informacao.
+// //     1. O valor de `nome`
+// >>>>>>> master
+// function arrayNomes(nome1, nome2) {
+//   const listaNomes = [nome1, nome2]
+//   return listaNomes
+// }
 
-1. Resolva os passos a seguir:
+// arrayNomes(pessoa1.nome, pessoa2.nome)
 
-    a) Crie um objeto.
+// <<<<<<< HEAD
+//     2. O numero de caracteres do valor `nome`
+// =======
+// //     2. O numero de caracteres do valor `nome`
+// >>>>>>> master
+// function arrayNomes1(nome1, nome2) {
+//   const numerodeCaracteres1 = nome1.length
+//   const numerodeCaracteres2 = nome2.length
+//   return [numerodeCaracteres1, numerodeCaracteres2]
+// }
 
-    Ele deve conter duas propriedades: nome (string) e apelidos (um array que sempre terá exatamente **três apelidos**).
+// arrayNomes1(pessoa1.nome, pessoa2.nome)
+// <<<<<<< HEAD
+//     3. O valor de `idade`
+// =======
+// //     3. O valor de `idade`
+// >>>>>>> master
 
-const pessoa = {
-  nome: 'Ana',
-  apelidos: ['banana', 'cana', 'tana']
-}
-function imprimeMensagem(objeto) {
-  console.log(
-    `Eu sou ${objeto.nome}, mas pode me chamar de: ${objeto.apelidos[0]} , ${objeto.apelidos[1]} , ${objeto.apelidos[2]} `
-  )
-}
-imprimeMensagem(pessoa)
-    Depois, escreva uma função que recebe como entrada um objeto
+// function arrayIdade(idade) {
+//   const valorIdade = idade
+//   return valorIdade
+// }
 
-    e imprime uma mensagem no modelo abaixo**:**
+// arrayIdade(pessoa1.idade)
 
-    // Exemplo de entrada
-const pessoa = {
-  nome: "Amanda",
-  apelidos: ["Amandinha", "Mandinha", "Mandi"]
-}
+// <<<<<<< HEAD
+//     4. O valor de `profissão`
+// =======
+// //     4. O valor de `profissão`
+// >>>>>>> master
 
-// Exemplo de saída
-"Eu sou Amanda, mas pode me chamar de: Amandinha, Mandinha ou Mandi"
+// function arrayProfissao(profissao1, profissao2) {
+//   const valorProfissao = [profissao1, profissao2]
+//   return valorProfissao
+// }
 
-***Não se esqueça de chamar a função passando o objeto que você criou como argumento, senão seu código não será executado!
+// arrayProfissao(pessoa1.profissao, pessoa2.profissao)
 
-b) Agora, usando o operador spread, crie um novo objeto mantendo o valor da propriedade nome, mas com uma nova lista de três apelidos.
+// <<<<<<< HEAD
+//     5. O numero de caracteres do valor `profissão`
 
-const novaPessoa = {
-  ...pessoa,
-  apelidos: ['lama', 'lana', 'sana']
-}
+//     const pessoa = {
+//       nome: "Bruno",
+//       idade: 23,
+//       profissao: "Instrutor"
+//     }
 
-imprimeMensagem(novaPessoa)
-Depois, chame a função feita no item anterior passando como argumento o novo objeto
+//     minhaFuncao(pessoa)
 
-**Não lembra da sintaxe de espalhamento ou spread? Não tem problema!
-Pode pesquisar a vontade! Nesse link tem vários exemplos - e não se esqueçam que o Google é melhor amigo da pessoa desenvolvedora.
+//     // Retorno: ["Bruno", 5, 23, "Instrutor", 9]
 
-2. Resolva os passos a seguir:
+//     3. Resolva os passos a seguir:
 
-    a) Crie dois objetos diferentes com as seguintes propriedades: nome, idade e profissão.
+//     a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
 
-const pessoa1 = {
-  nome: 'Ana',
-  idade: 30,
-  profissao: 'cabelereira'
-}
+// let carrinho = []
 
-const pessoa2 = {
-  nome: 'Caio',
-  idade: 30,
-  profissao: 'mecanico'
-}
+//     b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
+// =======
+// //     5. O numero de caracteres do valor `profissão`
 
-    b) Escreva uma função que receba esses objetos e retorne um array com as seguintes informações:
+// //     const pessoa = {
+// //       nome: "Bruno",
+// //       idade: 23,
+// //       profissao: "Instrutor"
+// //     }
 
-    1. O valor de `nome`
-function arrayNomes(nome1, nome2) {
-  const listaNomes = [nome1, nome2]
-  return listaNomes
-}
+// //     minhaFuncao(pessoa)
 
-arrayNomes(pessoa1.nome, pessoa2.nome)
+// //     // Retorno: ["Bruno", 5, 23, "Instrutor", 9]
 
-    2. O numero de caracteres do valor `nome`
-function arrayNomes1(nome1, nome2) {
-  const numerodeCaracteres1 = nome1.length
-  const numerodeCaracteres2 = nome2.length
-  return [numerodeCaracteres1, numerodeCaracteres2]
-}
+// //     3. Resolva os passos a seguir:
 
-arrayNomes1(pessoa1.nome, pessoa2.nome)
-    3. O valor de `idade`
+// //     a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
 
-function arrayIdade(idade) {
-  const valorIdade = idade
-  return valorIdade
-}
+// let carrinho = []
 
-arrayIdade(pessoa1.idade)
+// //     b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
+// >>>>>>> master
 
-    4. O valor de `profissão`
+// const frutas1 = {
+//   nome: 'maca',
+//   disponibilidade: true
+// }
 
-function arrayProfissao(profissao1, profissao2) {
-  const valorProfissao = [profissao1, profissao2]
-  return valorProfissao
-}
+// const frutas2 = {
+//   nome: 'laranja',
+//   disponibilidade: true
+// }
 
-arrayProfissao(pessoa1.profissao, pessoa2.profissao)
+// const frutas3 = {
+//   nome: 'morango',
+//   disponibilidade: true
+// }
 
-    5. O numero de caracteres do valor `profissão`
+// <<<<<<< HEAD
+//     c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do array de `carrinho`. Invoque essa função passando os três objetos criados.
+// =======
+// //     c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do array de `carrinho`. Invoque essa função passando os três objetos criados.
+// >>>>>>> master
 
-    const pessoa = {
-      nome: "Bruno",
-      idade: 23,
-      profissao: "Instrutor"
-    }
+// function arrayCarrinho(objeto1, objeto2, objeto3) {
+//   carrinho.push(objeto1)
+//   carrinho.push(objeto2)
+//   carrinho.push(objeto3)
+//   return carrinho
+// }
 
-    minhaFuncao(pessoa)
+// arrayCarrinho(frutas1, frutas2, frutas3)
 
-    // Retorno: ["Bruno", 5, 23, "Instrutor", 9]
+// <<<<<<< HEAD
+// ** Aqui você deve usar o método **push()**
 
-    3. Resolva os passos a seguir:
+// d) Imprima a variável `carrinho` e garanta que ela agora seja um **array preenchido com três objetos.**
+// =======
+// // ** Aqui você deve usar o método **push()**
 
-    a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
+// // d) Imprima a variável `carrinho` e garanta que ela agora seja um **array preenchido com três objetos.**
+// >>>>>>> master
 
-let carrinho = []
-
-    b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
-
-const frutas1 = {
-  nome: 'maca',
-  disponibilidade: true
-}
-
-const frutas2 = {
-  nome: 'laranja',
-  disponibilidade: true
-}
-
-const frutas3 = {
-  nome: 'morango',
-  disponibilidade: true
-}
-
-    c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do array de `carrinho`. Invoque essa função passando os três objetos criados.
-
-function arrayCarrinho(objeto1, objeto2, objeto3) {
-  carrinho.push(objeto1)
-  carrinho.push(objeto2)
-  carrinho.push(objeto3)
-  return carrinho
-}
-
-arrayCarrinho(frutas1, frutas2, frutas3)
-
-** Aqui você deve usar o método **push()**
-
-d) Imprima a variável `carrinho` e garanta que ela agora seja um **array preenchido com três objetos.**
-
-console.log(carrinho)
+// console.log(carrinho)
