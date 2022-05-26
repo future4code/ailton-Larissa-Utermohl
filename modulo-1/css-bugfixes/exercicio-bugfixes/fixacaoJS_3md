@@ -1,0 +1,18 @@
+```def soma1(A, B):
+    C = A + B
+
+def soma2(A, B):
+    return A + B
+
+A = 1
+B = 2
+
+print("Soma 1a:", soma1(A, B))
+
+C = soma1(A,B)
+print("Soma 1b:",C)
+
+print("Soma 2a:", soma2(A, B))
+
+D = soma2(A,B)
+print("Soma 2b:", D)``
