@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto+Mono:wght@300;500&family=Poppins:wght@600&display=swap');
+
+
+
+body
+{
+	background-color: #f6f5f5;
+	margin-right: 0px;
+	padding: 0px;
+  box-sizing: border-box;
+}
+  
+  ul
+  {
+    list-style: none;
+  }
+  
+  a
+  {
+    text-decoration: none;
+  }
+  
+  section
+  {
+    width: 100%;
+    height: 95vh;
+    background-image: url("./img/back1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Estilo navegador */
+  nav
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    padding: 0px 5%;
+  }
+  
+  nav ul
+  {
+    display: flex;
+  }
+  
+  nav ul li a
+  {
+    margin: 30px;
+    font-family: myriad pro regular;
+    color: #572a5f;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .logo
+  {
+    font-family: Poppins;
+    color: #572a5f;
+    font-size: 22px;
+  }
+  
+  .active
+  {
+    font-weight: bold;
+    color: #572a5f;
+  }
+  
+  /* Estilo Textos */
+  .conteudo-texto p:nth-child(1)
+  {
+    font-family: Poppins;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+  
+  }
+  
+  .conteudo-texto p:nth-child(2)
+  {
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+  }
+  
+  .conteudo-texto p:nth-child(3)
+  {
+    font-family: myriad pro regular;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  .conteudo-texto 
+  {
+    line-height: 0px;
+    margin: 45px 0px 25px;
+  }
+  
+  .conteudo-texto 
+  {
+    position: absolute;
+    left: 13%;
+    top: 42%;
+    transform: translate(-13%, -42%);
+  }
+  
+  
+  
+  
+  .conteudo-sobre
+  {
+    width: 80%;
+    height:330px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    display: flex;
+    margin: -7% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  
+  /* Estilo Imagem Sobre */
+  .conteudo-sobre img
+  {
+    height: 300px;
+    
+  }
+  
+  .texto-sobre 
+  {
+    width: 550px;
+    font-size: 25px;
+    font-family: Montserrat;
+    color: #645464;
+  }
+  
+
+  .texto-sobre  p:nth-child(2)
+  
+  .texto-sobre p:nth-child(3),
+  .texto-sobre p:nth-child(4)
+  {
+    color: #7e7d7d;
+    font-family: Montserrat;
+    font-size: 30px;
+  }
+  
+  .texto-sobre button
+  {
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    outline: none;
+    border:none;
+    font-family: Montserrat;
+    background-color: #816886;
+  }
+
+  .btn1:hover {
+    background-color: #5d0a6e;
+  }
+
+  .btn2:hover {
+    background-color: #5d0a6e;
+  }
+  
+  
+  /* Seção de Serviços  */
+  
+  .servicos
+  {
+    height:500px;
+    background-color: #e8e5e8;
+    text-align: center; 
+img {
+
+  width: 100%;
+}
+  }
+  
+ 
+  .servicos-textos p:nth-child(2)
+  {
+    font-family: myriad pro;
+    font-weight: bold;
+    color: #78607b;
+    font-size:40px;
+    line-height: 5px;
+  
+  }
+  
+  
+   .servicos-textos
+  {
+    width: 500px;
+    margin: 50px 0px 0px 50px;
+    
+  }
+  
+  .box1, .box2, .box3, .box4
+  {
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 12px #78607b;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+  
+  }
+  
+  .conteudo-box 
+  {
+    display: flex;
+      justify-content: space-between;
+      margin-left: 50px;
+      margin-right: 50px;
+    
+  }
+  
+  .box1
+  {
+    background-image: url("img/services-1.png");
+    font-size: 25px;
+   
+  
+  }
+  
+  
+  .box2
+  {
+    background-image: url("img/services-2.png");
+    font-size: 25px;
+  }
+  
+  
+  .box3
+  {
+    background-image: url("img/servies-3.png");
+    font-size: 25px;
+  }
+  
+  .box4
+  {
+    background-image: url("img/servies-4.png");
+    font-size: 25px;
+  }
+  
+  
+  .box1 span,
+  .box2 span,
+  .box3 span,
+  .box4 span
+  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c2c1c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    font-weight: bold;
+    margin-top: 10px;
+    
+  }
+  
+  .box1 p:nth-child(2),
+  .box2 p:nth-child(2),
+  .box3 p:nth-child(2),
+  .box4 p:nth-child(2)
+  {
+    color: #4c3a51;
+    font-family: calibri;
+    font-size: 23px;
+    line-height: 0px;
+  }
+  
+  .box1 p:nth-child(3),
+  .box2 p:nth-child(3),
+  .box3 p:nth-child(3),
+  .box4 p:nth-child(3)
+  {
+    font-family: myriad pro;
+    text-align: center;
+    width: 250px;
+    color: #714a7f;
+    margin: 0px 0px 20px 0px;
+    
+  }
+  
+  .box1 button,
+  .box2 button,
+  .box3 button,
+  .box4 button
+  
+  {
+    width: 100px;
+    height: 30px;
+    background-color: #b7b0b9;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  
+  /* Seção fale comigo */
+  
+  .contato
+  {
+    width: 100%;
+    height: 100px;
+  background-color: #cdc5cf;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contato p
+  {
+    color: #533151;
+    font-size: 30px;
+    font-family: Montserrat;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .contato button
+  {
+    width: 200px;
+    height: 40px;
+    background-color: #ffffff;
+    outline: none;
+    border:none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+/*Formulario*/
+
+  
+  /* Seção footer */
+  
+  footer
+  {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  footer p
+  {
+    font-family: Roboto Mono;
+  }
+  
+  footer p:nth-child(1)
+  {
+    font-weight: bold;
+    color: #191919;
+    line-height: 10px;
+    font-size: 30px;
+  }
+  
+  footer p:nth-child(2)
+  {
+    font-size: 16px;
+    color: #7e7d7d;
+    width: 500px;
+    text-align: center;
+  }
+  
+  .copy
+  {
+    color: #565555;
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
