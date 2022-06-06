@@ -1,0 +1,62 @@
+*{ margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-columns: ;
+}
+
+header{
+  background-color: rbg;
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+
+}
+
+p{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Times New Roman";
+}
+
+input{
+  padding: 8px;
+  width: 122px;
+  margin-right: 35px;
+}
+
+section{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-rows: repeat(4,1fr);
+  gap:16px;
+  padding: 8px;
+}
+
+.card{
+  display: grid;
+  border: 1px solid red;
+}
+
+.all-video{
+   
+  height: 80px;
+  width: 150px;
+}
+
+.titulo{
+  font-size: 16px;
+}
+
+footer{
+  background-color: grey;
+  grid-column: 1/ -1;
+}
