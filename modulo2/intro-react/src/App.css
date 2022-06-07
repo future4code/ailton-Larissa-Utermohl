@@ -13,12 +13,17 @@ body {
 }
 
 header {
-    background-color: rgb(222, 186, 120);
+    background-color: rgb(228, 39, 39);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
     height: 10%;
+}
+.youtube-logo{
+    
+
+
 }
 
 header h1{
@@ -108,12 +113,12 @@ main {
 
 footer {
     height: 10%;
-    background-color: rgb(235, 199, 136);
+    background-color: rgb(244, 71, 44);
     color: white;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
     
 }
 

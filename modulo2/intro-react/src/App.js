@@ -13,8 +13,13 @@ function App() {
     <div>
       <div className="tela-inteira">
         <header>
-          <h1>Future Tube</h1>
-          <input type="text" placeholder="Busca" id="campoDeBusca" />
+
+          
+          <img src={} className= "youtube-logo" alt=""/>
+          <form className="search bar"/>
+          <input type="search" placeholder="Search" aria-label='Search' />
+          <button type="submit" className="search-btn"/>
+          
         </header>
 
         <main>
