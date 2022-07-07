@@ -1,0 +1,88 @@
+body {
+font-size: 1em;
+font-family: "Helvetica", sans-serif;
+background: #e6e6e6;
+}
+
+
+/*
+****Layout***** 
+*/
+#area-cabecalho {
+background-color:rgb(176, 137, 137);
+padding: 8px;
+text-align: center;
+}
+
+#area-logo {
+padding: 10px;
+text-align: center;
+}
+
+#area-menu{
+padding: 15px; 
+background-color: bisque;
+text-align: center;
+}
+
+h1 {
+color:bisque;
+font-size: 2.5em;
+
+}
+
+h2{
+  color:bisque;
+  font-size:larger;
+  
+  }
+
+  table{
+
+    border-width: 2px;
+    background-color: antiquewhite;
+    text-align: center;
+    margin: auto;
+  }
+
+  .cor{
+    color: rgb(39, 76, 106);}
+
+.postagem{
+padding: 2px;
+margin: 2px;
+}
+
+.imagem1{
+padding: 0px;
+margin: 20px;
+
+}
+
+
+
+#rodape {
+clear: both;
+text-align:center;
+background: bisque;
+padding: 5px 10px;  
+}
+
+h3{
+color: rgb(39, 76, 106);
+  
+}
+/* ****** Menu*****     */
+
+a:{ text-decoration: none;
+}
+
+a:link, a:visited{
+  color: rgb(39, 76, 106);
+  padding: 8px 12px;
+}
+
+a:hover {
+  color: bisque;
+background: rgb(176, 137, 137); 
+}
